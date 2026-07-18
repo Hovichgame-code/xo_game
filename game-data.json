@@ -1,0 +1,16 @@
+{
+  "emojis": {
+    "🌱":{"tags":["plant","living","flammable"]}, "🌿":{"tags":["plant","living","flammable"]}, "🌳":{"tags":["tree","plant","living","flammable"]}, "🌲":{"tags":["tree","plant","living","flammable"]}, "🍄":{"tags":["fungus","living"]}, "🪨":{"tags":["rock"]}, "💎":{"tags":["rock"]}, "🔥":{"tags":["fire","hot"]}, "💧":{"tags":["water","liquid"]}, "❄️":{"tags":["ice","cold"]}, "⚡":{"tags":["electric"]}, "🌪️":{"tags":["wind"]}, "🌋":{"tags":["lava","hot"]}, "🌧️":{"tags":["water","rain"]}, "💨":{"tags":["steam","wind"]}, "🦠":{"tags":["virus"]}, "🐟":{"tags":["animal","living"]}, "🐺":{"tags":["animal","living"]}, "🦊":{"tags":["animal","living"]}, "🐝":{"tags":["animal","living"]}, "👤":{"tags":["human","living"]}, "🧑‍🚒":{"tags":["human","living","firefighter"]}, "🚗":{"tags":["vehicle"]}, "🚂":{"tags":["vehicle"]}, "🚀":{"tags":["vehicle"]}, "🍎":{"tags":["food","organic"]}, "🍕":{"tags":["food","organic"]}, "⚙️":{"tags":["tool","metal"]}, "🪵":{"tags":["wood","flammable"]}, "☠️":{"tags":["dead"]}
+  },
+  "reactions": [
+    {"group":"physics","range":1,"source":"💧","target":"🔥","result":{"source":"💨","target":"💨"},"note":"💧 + 🔥 → 💨"},
+    {"group":"physics","range":1,"source":{"tag":"hot"},"target":"❄️","result":{"target":"💧"},"note":"🔥 + ❄️ → 💧"},
+    {"group":"physics","range":1,"source":"⚡","target":{"tag":"flammable"},"result":{"target":"🔥"},"note":"⚡ → 🔥"},
+    {"group":"chemistry","range":1,"source":"💧","target":"🌱","result":{"target":"🌿"},"note":"💧 + 🌱 → 🌿"},
+    {"group":"chemistry","range":1,"source":"💧","target":"🌿","result":{"target":"🌳"},"note":"💧 + 🌿 → 🌳"},
+    {"group":"chemistry","range":1,"source":"🔥","target":{"tag":"tree"},"result":{"target":"🪵"},"note":"🔥 + 🌳 → 🪵"},
+    {"group":"chemistry","range":1,"source":"🔥","target":{"tag":"living"},"except":"firefighter","result":{"target":"☠️"},"note":"🔥 + 🧬 → ☠️"},
+    {"group":"chemistry","range":1,"source":"🦠","target":{"tag":"living"},"result":{"target":"☠️"},"note":"🦠 + 🧬 → ☠️"},
+    {"group":"physics","range":1,"source":{"tag":"vehicle"},"target":{"tag":"human"},"result":{"target":"☠️"},"note":"🚗 + 👤 → ☠️"}
+  ]
+}
